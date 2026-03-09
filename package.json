@@ -4,12 +4,17 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev":"nodemon src/index.js"
+    "dev": " nodemon src/index.js"
   },
   "author": "OMM JYOTI PUTHAL",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "nodemon": "^3.1.14"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mongoose": "^9.2.4"
   }
 }
