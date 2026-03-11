@@ -1,5 +1,5 @@
 // require('dotenv').config()
-
+import app from "./app.js";
 import dotenv from "dotenv"
 import connectDB from "./db/index.js"
 
@@ -8,7 +8,17 @@ dotenv.config({
     path:"./.env"
 })
 
-connectDB();
+connectDB()
+.then(
+   ()=>{
+    app.listen(process.env.PORT || 8000,()=>{
+        console.log(`Server is rinning ${process.env.PORT}`)
+    })
+   }
+)
+.catch((error)=>{
+ console.error("mongodb connection faild")
+})
 
 
 
